@@ -1,0 +1,21 @@
+// package tinyurl provides support for TinyURL shortening service.
+package tinyurl
+
+import (
+	"github.com/subosito/shorturl/base"
+)
+
+type TinyURL struct {
+	*base.Service
+}
+
+func New() *TinyURL {
+	return &TinyURL{&base.Service{
+		Scheme: "http",
+		Host:   "tinyurl.com",
+		Method: "GET",
+		Path:   "/api-create.php",
+		Field:  "url",
+		Code:   200,
+	}}
+}
