@@ -8,32 +8,40 @@ Generic implementation for interacting with various URL shortening services in G
 
 There are two ways using shorturl package:
 
-1. Unified client
+### Unified client
 
-    ```go
-    // import "github.com/subosito/shorturl"
+```go
+// import "github.com/subosito/shorturl"
 
-    u := "http://subosito.com/"
+u := "http://subosito.com/"
 
-    c := shorturl.NewClient("tinyurl") // you can use another provider, eg: "isgd"
-    u, err := c.Shorten(Url)
-    if err == nil {
-    	fmt.Println(u)
-    }
-    ```
+c := shorturl.NewClient("tinyurl") // you can use another provider, eg: "isgd"
+u, err := c.Shorten(Url)
+if err == nil {
+fmt.Println(u)
+}
+```
 
-2. Provider
+### Specific provider
 
-    ```go
-    // import "github.com/subosito/shorturl/tinyurl"
+```go
+// import "github.com/subosito/shorturl/tinyurl"
 
-    u := "http://subosito.com/"
-    s := tinyurl.New()
-    u, err := s.Shorten(Url)
-    if err == nil {
-    	fmt.Println(u)
-    }
-    ```
+u := "http://subosito.com/"
+s := tinyurl.New()
+u, err := s.Shorten(Url)
+if err == nil {
+fmt.Println(u)
+}
+```
+
+## Supported Services
+
+- TinyURL
+- is.gd
+- Git.IO
+- Bit.ly
+- ...
 
 ## Credits
 

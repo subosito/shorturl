@@ -1,5 +1,8 @@
 language: go
 go: 1.1
-
 script:
-  - go test -v ./...
+- go test -v ./...
+env:
+  matrix:
+  - secure: Z0KMeVxPPiAzhGaJgpKNpaC/A62ZU4xeblxDRjO8RAyjmCIPt1qIIAgbS3g+L7aBBpWT/Gu5OVXwFO+rgZBerKgzkn2B+knlaFaUyzBrgdRuwXz/dYnm1nqZxaGo0hngacEJP7Fohm6ZARjPNu+2rCGz+W2kcpKdqdJQvjzGpfo=
+  - secure: PVlr8dv6603h3rUij5UBBhCbAdj3ZYZHwqqZnVaqJNSR/9/h6K3hZolZCZwBVGNxQYWXfaBLDEj7aeUHPKwq55lyYvPi0ZwGE2KBxUJ/vWMR6QlYKXw7pfVpxbB4TbPdFbsVPRsdmvxgk+PRTu/AunaQBO7JQGq0NPJvpv9Xm58=

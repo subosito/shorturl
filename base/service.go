@@ -21,6 +21,7 @@ type Service struct {
 	Method    string
 	Path      string
 	Field     string
+	Params    map[string]string
 	Transport http.RoundTripper
 }
 
@@ -51,9 +52,6 @@ func (s *Service) Shorten(u string) ([]byte, error) {
 		return nil, err
 	}
 
-	fmt.Printf("%s\n", err)
-	fmt.Printf("%s\n", b)
-
 	return b, nil
 }
 
@@ -61,6 +59,11 @@ func (s *Service) Request(u string) (*http.Response, error) {
 	su := s.Url()
 	d := ""
 	v := url.Values{}
+
+	for key, val := range s.Params {
+		v.Set(key, val)
+	}
+
 	v.Set(s.Field, u)
 
 	switch s.Method {
@@ -71,8 +74,6 @@ func (s *Service) Request(u string) (*http.Response, error) {
 	}
 
 	req, err := http.NewRequest(s.Method, su.String(), strings.NewReader(d))
-
-	fmt.Printf("%+v\n", req)
 
 	if err != nil {
 		return nil, err

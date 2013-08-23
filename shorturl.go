@@ -2,7 +2,11 @@ package shorturl
 
 import (
 	"errors"
+	"github.com/subosito/shorturl/bitly"
+	"github.com/subosito/shorturl/gitio"
 	"github.com/subosito/shorturl/isgd"
+	"github.com/subosito/shorturl/tinyurl"
+	"os"
 )
 
 type Client struct {
@@ -16,8 +20,19 @@ func NewClient(provider string) *Client {
 
 func (c *Client) Shorten(u string) ([]byte, error) {
 	switch c.Provider {
+	case "tinyurl":
+		s := tinyurl.New()
+		return s.Shorten(u)
 	case "isgd":
 		s := isgd.New()
+		return s.Shorten(u)
+	case "gitio":
+		s := gitio.New()
+		return s.Shorten(u)
+	case "bitly":
+		s := bitly.New()
+		s.Params["login"] = os.Getenv("BITLY_LOGIN")
+		s.Params["apiKey"] = os.Getenv("BITLY_API_KEY")
 		return s.Shorten(u)
 	}
 
