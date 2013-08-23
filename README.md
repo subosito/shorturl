@@ -1,5 +1,7 @@
 # ShortURL
 
+[![Build Status](https://travis-ci.org/subosito/shorturl.png)](https://travis-ci.org/subosito/shorturl)
+
 Generic implementation for interacting with various URL shortening services in Go.
 
 ## Usage
