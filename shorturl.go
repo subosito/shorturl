@@ -6,6 +6,7 @@ import (
 	"github.com/subosito/shorturl/gitio"
 	"github.com/subosito/shorturl/isgd"
 	"github.com/subosito/shorturl/lns"
+	"github.com/subosito/shorturl/shorl"
 	"github.com/subosito/shorturl/tinyurl"
 	"os"
 )
@@ -37,6 +38,9 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 		return s.Shorten(u)
 	case "lns":
 		s := lns.New()
+		return s.Shorten(u)
+	case "shorl":
+		s := shorl.New()
 		return s.Shorten(u)
 	}
 

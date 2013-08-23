@@ -41,6 +41,8 @@ fmt.Println(u)
 - is.gd
 - Git.IO
 - Bit.ly
+- ln-s
+- Shorl
 - ...
 
 ## Credits

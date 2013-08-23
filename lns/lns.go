@@ -10,7 +10,7 @@ type Lns struct {
 }
 
 func New() *Lns {
-	return &Lns {&base.Service{
+	return &Lns{&base.Service{
 		Scheme: "http",
 		Host:   "ln-s.net",
 		Method: "GET",
