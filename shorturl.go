@@ -6,6 +6,7 @@ import (
 	"github.com/subosito/shorturl/gitio"
 	"github.com/subosito/shorturl/isgd"
 	"github.com/subosito/shorturl/lns"
+	"github.com/subosito/shorturl/moourl"
 	"github.com/subosito/shorturl/shorl"
 	"github.com/subosito/shorturl/tinyurl"
 	"github.com/subosito/shorturl/vamu"
@@ -45,6 +46,9 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 		return s.Shorten(u)
 	case "vamu":
 		s := vamu.New()
+		return s.Shorten(u)
+	case "moourl":
+		s := moourl.New()
 		return s.Shorten(u)
 	}
 

@@ -43,6 +43,8 @@ fmt.Println(u)
 - [bit.ly](https://bitly.com/)
 - [ln-s](http://ln-s.net/)
 - [shorl](http://shorl.com/)
+- [va.mu](http://va.mu/)
+- [moourl](http://moourl.com/)
 - ...
 
 ## Resources

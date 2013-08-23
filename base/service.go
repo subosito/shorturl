@@ -74,7 +74,6 @@ func (s *Service) Request(u string) (*http.Response, error) {
 	}
 
 	req, err := http.NewRequest(s.Method, su.String(), strings.NewReader(d))
-
 	if err != nil {
 		return nil, err
 	}
