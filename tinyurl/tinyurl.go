@@ -1,4 +1,4 @@
-// package tinyurl provides support for TinyURL shortening service.
+// package tinyurl provides support for tinyurl.com shortening service.
 package tinyurl
 
 import (

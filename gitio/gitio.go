@@ -1,4 +1,4 @@
-// package gitio provides support for Github URL shortening services.
+// package gitio provides support for git.io, a Github URL shortening services.
 // You can shorten https://github.com/* and https://gist.github.com/* url only.
 package gitio
 

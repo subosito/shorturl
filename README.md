@@ -8,7 +8,7 @@ Generic implementation for interacting with various URL shortening services in G
 
 There are two ways using shorturl package:
 
-### Unified client
+#### Unified client
 
 ```go
 // import "github.com/subosito/shorturl"
@@ -22,7 +22,7 @@ fmt.Println(u)
 }
 ```
 
-### Specific provider
+#### Provider
 
 ```go
 // import "github.com/subosito/shorturl/tinyurl"
@@ -37,14 +37,19 @@ fmt.Println(u)
 
 ## Supported Services
 
-- TinyURL
-- is.gd
-- Git.IO
-- Bit.ly
-- ln-s
-- Shorl
+- [tinyurl](http://tinyurl.com/)
+- [is.gd](http://is.gd/)
+- [git.io](http://git.io/)
+- [bit.ly](https://bitly.com/)
+- [ln-s](http://ln-s.net/)
+- [shorl](http://shorl.com/)
 - ...
+
+## Resources
+
+- [Documentation](http://godoc.org/github.com/subosito/shorturl)
 
 ## Credits
 
-Inspired by @robbyrussell's shorturl implementation in Ruby, https://github.com/robbyrussell/shorturl.
+Inspiration comes from [shorturl Rubygem](https://github.com/robbyrussell/shorturl) by [@robbyrussell](https://github.com/robbyrussell)
+
