@@ -4,23 +4,23 @@
 
 Generic implementation for interacting with various URL shortening services in Go.
 
-## Usage
+## Shortening URL
 
-There are two ways using shorturl package:
+ShortURL provides simple API to shorten a long URL. There are two ways to perform this:
 
 #### Unified client
 
 ```go
 // import "github.com/subosito/shorturl"
 
-c := shorturl.NewClient("tinyurl") // you can use another provider, eg: "isgd"
-u, err := c.Shorten("http://example.com/")
+provider := "tinyurl"
+u, err := shorturl.Shorten("http://example.com/", provider)
 if err == nil {
 	fmt.Println(u)
 }
 ```
 
-#### Provider
+#### Provider package
 
 ```go
 // import "github.com/subosito/shorturl/tinyurl"
@@ -31,6 +31,22 @@ if err == nil {
 	fmt.Println(u)
 }
 ```
+
+## Expanding short URL
+
+Besides shortening long URL, this package also provides simple API to expand short URL into its original long URL.
+
+```go
+// import "github.com/subosito/shorturl"
+
+provider := "bitly"
+u, err := shorturl.Expand("http://bit.ly/13M3JX5", provider)
+if err == nil {
+	fmt.Println(u)
+}
+```
+
+_Notes: Currently, adf.ly is not supported._
 
 ## Supported Services
 
