@@ -39,8 +39,7 @@ Besides shortening long URL, this package also provides simple API to expand sho
 ```go
 // import "github.com/subosito/shorturl"
 
-provider := "bitly"
-u, err := shorturl.Expand("http://bit.ly/13M3JX5", provider)
+u, err := shorturl.Expand("http://bit.ly/13M3JX5")
 if err == nil {
 	fmt.Println(u)
 }
