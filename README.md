@@ -47,6 +47,7 @@ fmt.Println(u)
 | `cligs`     | http://cli.gs/         |
 | `snipurl`   | http://snipurl.com/    |
 | `adfly`     | http://adf.ly/         |
+| `migreme`   | http://migre.me/       |
 
 ## Resources
 

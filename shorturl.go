@@ -8,6 +8,7 @@ import (
 	"github.com/subosito/shorturl/gitio"
 	"github.com/subosito/shorturl/isgd"
 	"github.com/subosito/shorturl/lns"
+	"github.com/subosito/shorturl/migreme"
 	"github.com/subosito/shorturl/moourl"
 	"github.com/subosito/shorturl/shorl"
 	"github.com/subosito/shorturl/snipurl"
@@ -61,6 +62,9 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 		return s.Shorten(u)
 	case "adfly":
 		s := adfly.New()
+		return s.Shorten(u)
+	case "migreme":
+		s := migreme.New()
 		return s.Shorten(u)
 	}
 
