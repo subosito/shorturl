@@ -13,10 +13,8 @@ There are two ways using shorturl package:
 ```go
 // import "github.com/subosito/shorturl"
 
-url := "http://subosito.com/"
-
 c := shorturl.NewClient("tinyurl") // you can use another provider, eg: "isgd"
-u, err := c.Shorten(Url)
+u, err := c.Shorten("http://example.com/")
 if err == nil {
 fmt.Println(u)
 }
@@ -27,9 +25,8 @@ fmt.Println(u)
 ```go
 // import "github.com/subosito/shorturl/tinyurl"
 
-Url := "http://subosito.com/"
 s := tinyurl.New()
-u, err := s.Shorten(Url)
+u, err := s.Shorten("http://example.com/")
 if err == nil {
 fmt.Println(u)
 }
