@@ -37,17 +37,18 @@ fmt.Println(u)
 
 ## Supported Services
 
-| package   | service                |
-|-----------|------------------------|
-| `tinyurl` | http://tinyurl.com/    |
-| `isgd`    | http://is.gd/          |
-| `gitio`   | http://git.io/         |
-| `bitly`   | https://bitly.com/     |
-| `lns`     | http://ln-s.net/       |
-| `shorl`   | http://shorl.com/      |
-| `vamu`    | http://va.mu/          |
-| `moourl`  | http://moourl.com/     |
-| `cligs`   | http://cli.gs/         |
+| package     | service                |
+|-------------|------------------------|
+| `tinyurl`   | http://tinyurl.com/    |
+| `isgd`      | http://is.gd/          |
+| `gitio`     | http://git.io/         |
+| `bitly`     | https://bitly.com/     |
+| `lns`       | http://ln-s.net/       |
+| `shorl`     | http://shorl.com/      |
+| `vamu`      | http://va.mu/          |
+| `moourl`    | http://moourl.com/     |
+| `cligs`     | http://cli.gs/         |
+| `snipurl`   | http://snipurl.com/    |
 
 ## Resources
 

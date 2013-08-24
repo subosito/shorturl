@@ -1,5 +1,5 @@
-// package cligs provides support for cli.gs shortening service.
-package cligs
+// package snipurl provides support for snipurl.com shortening service.
+package snipurl
 
 import (
 	"github.com/subosito/shorturl/base"
@@ -8,28 +8,28 @@ import (
 	"strings"
 )
 
-var Pattern string = `value="http://cli.gs/[0-9a-zA-Z]+`
+var Pattern string = `value="http://snipurl.com/[0-9a-zA-Z]+`
 
-type Cligs struct {
+type SnipURL struct {
 	*base.Service
 }
 
-func New() *Cligs {
-	return &Cligs{&base.Service{
+func New() *SnipURL {
+	return &SnipURL{&base.Service{
 		Scheme: "http",
-		Host:   "cli.gs",
+		Host:   "snipurl.com",
 		Method: "POST",
 		Field:  "url",
 		Code:   http.StatusOK,
 		Params: map[string]string{
-			"do":         "shorten",
-			"sbmt":       "Shorten",
-			"custom_url": "",
+			"alias":       "",
+			"title":       "",
+			"private_key": "",
 		},
 	}}
 }
 
-func (s *Cligs) Shorten(u string) ([]byte, error) {
+func (s *SnipURL) Shorten(u string) ([]byte, error) {
 	res, err := s.Request(u)
 	if err != nil {
 		return nil, err
