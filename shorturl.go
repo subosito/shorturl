@@ -6,6 +6,7 @@ import (
 	"github.com/subosito/shorturl/bitly"
 	"github.com/subosito/shorturl/cligs"
 	"github.com/subosito/shorturl/gitio"
+	"github.com/subosito/shorturl/googl"
 	"github.com/subosito/shorturl/isgd"
 	"github.com/subosito/shorturl/lns"
 	"github.com/subosito/shorturl/migreme"
@@ -65,6 +66,10 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 		return s.Shorten(u)
 	case "migreme":
 		s := migreme.New()
+		return s.Shorten(u)
+	case "googl":
+		s := googl.New()
+		s.Params["key"] = os.Getenv("GOOGL_API_KEY")
 		return s.Shorten(u)
 	}
 

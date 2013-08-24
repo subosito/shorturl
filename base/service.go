@@ -2,6 +2,7 @@
 package base
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -22,6 +23,7 @@ type Service struct {
 	Path      string
 	Field     string
 	Params    map[string]string
+	Format    string
 	Transport http.RoundTripper
 }
 
@@ -73,13 +75,25 @@ func (s *Service) Request(u string) (*http.Response, error) {
 		d = v.Encode()
 	}
 
+	if s.Format == "JSON" {
+		b, err := json.Marshal(v)
+		if err != nil {
+			return nil, err
+		}
+		d = string(b)
+	}
+
 	req, err := http.NewRequest(s.Method, su.String(), strings.NewReader(d))
 	if err != nil {
 		return nil, err
 	}
 
 	if s.Method == "POST" {
-		req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+		req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	}
+
+	if s.Format == "JSON" {
+		req.Header.Set("Content-Type", "application/json")
 	}
 
 	client := &http.Client{Transport: s.transport()}
