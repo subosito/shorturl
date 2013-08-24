@@ -49,6 +49,7 @@ fmt.Println(u)
 | `moourl`    | http://moourl.com/     |
 | `cligs`     | http://cli.gs/         |
 | `snipurl`   | http://snipurl.com/    |
+| `adfly`     | http://adf.ly/         |
 
 ## Resources
 

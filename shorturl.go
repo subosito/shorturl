@@ -2,12 +2,15 @@ package shorturl
 
 import (
 	"errors"
+	"github.com/subosito/shorturl/adfly"
 	"github.com/subosito/shorturl/bitly"
+	"github.com/subosito/shorturl/cligs"
 	"github.com/subosito/shorturl/gitio"
 	"github.com/subosito/shorturl/isgd"
 	"github.com/subosito/shorturl/lns"
 	"github.com/subosito/shorturl/moourl"
 	"github.com/subosito/shorturl/shorl"
+	"github.com/subosito/shorturl/snipurl"
 	"github.com/subosito/shorturl/tinyurl"
 	"github.com/subosito/shorturl/vamu"
 	"os"
@@ -49,6 +52,15 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 		return s.Shorten(u)
 	case "moourl":
 		s := moourl.New()
+		return s.Shorten(u)
+	case "cligs":
+		s := cligs.New()
+		return s.Shorten(u)
+	case "snipurl":
+		s := snipurl.New()
+		return s.Shorten(u)
+	case "adfly":
+		s := adfly.New()
 		return s.Shorten(u)
 	}
 

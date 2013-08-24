@@ -1,5 +1,5 @@
-// package snipurl provides support for snipurl.com shortening service.
-package snipurl
+// package adfly provides support for adf.ly shortening service.
+package adfly
 
 import (
 	"github.com/subosito/shorturl/base"
@@ -8,28 +8,28 @@ import (
 	"strings"
 )
 
-var Pattern string = `value="http://snipurl.com/[0-9a-zA-Z]+`
+var Pattern string = `http:\\/\\/adf.ly\\/[a-zA-z0-9]+`
 
-type SnipURL struct {
+type Adfly struct {
 	*base.Service
 }
 
-func New() *SnipURL {
-	return &SnipURL{&base.Service{
+func New() *Adfly {
+	return &Adfly{&base.Service{
 		Scheme: "http",
-		Host:   "snipurl.com",
+		Host:   "adf.ly",
 		Method: "POST",
+		Path:   "/shortener/shorten",
 		Field:  "url",
 		Code:   http.StatusOK,
 		Params: map[string]string{
-			"alias":       "",
-			"title":       "",
-			"private_key": "",
+			"_user_id": "-1",
+			"_api_key": "2ba3f6ce601d043c177eb2a83eb34f5g",
 		},
 	}}
 }
 
-func (s *SnipURL) Shorten(u string) ([]byte, error) {
+func (s *Adfly) Shorten(u string) ([]byte, error) {
 	res, err := s.Request(u)
 	if err != nil {
 		return nil, err
@@ -42,7 +42,7 @@ func (s *SnipURL) Shorten(u string) ([]byte, error) {
 
 	r := regexp.MustCompile(Pattern)
 	o := r.FindString(string(b))
-	f := strings.Replace(o, `value="`, ``, 1)
+	f := strings.Replace(o, `\`, ``, -1)
 
 	return []byte(f), nil
 }
