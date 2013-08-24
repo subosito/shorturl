@@ -57,23 +57,24 @@ _Notes: Currently, adf.ly is not supported._
 
 ## Supported Services
 
-| package     | service                | Enviroment Variables           |
-|-------------|------------------------|--------------------------------|
-| `tinyurl`   | http://tinyurl.com/    | -                              |
-| `isgd`      | http://is.gd/          | -                              |
-| `gitio`     | http://git.io/         | -                              |
-| `bitly`     | https://bitly.com/     | `BITLY_API_KEY`, `BITLY_LOGIN` |
-| `lns`       | http://ln-s.net/       | -                              |
-| `shorl`     | http://shorl.com/      | -                              |
-| `vamu`      | http://va.mu/          | -                              |
-| `moourl`    | http://moourl.com/     | -                              |
-| `cligs`     | http://cli.gs/         | -                              |
-| `snipurl`   | http://snipurl.com/    | -                              |
-| `adfly`     | http://adf.ly/         | -                              |
-| `googl`     | http://goo.gl/         | `GOOGL_API_KEY`                |
-| `gggg`      | http://gg.gg/          | -                              |
-| `parapt`    | http://para.pt/        | -                              |
-| `pendekin`  | http://pendek.in/      | -                              |
+| package     | service                  | Enviroment Variables           |
+|-------------|--------------------------|--------------------------------|
+| `tinyurl`   | http://tinyurl.com/      | -                              |
+| `isgd`      | http://is.gd/            | -                              |
+| `gitio`     | http://git.io/           | -                              |
+| `bitly`     | https://bitly.com/       | `BITLY_API_KEY`, `BITLY_LOGIN` |
+| `lns`       | http://ln-s.net/         | -                              |
+| `shorl`     | http://shorl.com/        | -                              |
+| `vamu`      | http://va.mu/            | -                              |
+| `moourl`    | http://moourl.com/       | -                              |
+| `cligs`     | http://cli.gs/           | -                              |
+| `snipurl`   | http://snipurl.com/      | -                              |
+| `adfly`     | http://adf.ly/           | -                              |
+| `googl`     | http://goo.gl/           | `GOOGL_API_KEY`                |
+| `gggg`      | http://gg.gg/            | -                              |
+| `parapt`    | http://para.pt/          | -                              |
+| `pendekin`  | http://pendek.in/        | -                              |
+| `catchy`    | http://catchylink.com/   | -                              |
 
 ## Resources
 

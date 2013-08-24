@@ -4,6 +4,7 @@ import (
 	"errors"
 	"github.com/subosito/shorturl/adfly"
 	"github.com/subosito/shorturl/bitly"
+	"github.com/subosito/shorturl/catchy"
 	"github.com/subosito/shorturl/cligs"
 	"github.com/subosito/shorturl/gggg"
 	"github.com/subosito/shorturl/gitio"
@@ -78,6 +79,9 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 		return s.Shorten(u)
 	case "pendekin":
 		s := pendekin.New()
+		return s.Shorten(u)
+	case "catchy":
+		s := catchy.New()
 		return s.Shorten(u)
 	}
 
