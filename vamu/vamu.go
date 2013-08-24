@@ -3,6 +3,7 @@ package vamu
 
 import (
 	"github.com/subosito/shorturl/base"
+	"net/http"
 )
 
 type Vamu struct {
@@ -16,6 +17,6 @@ func New() *Vamu {
 		Method: "GET",
 		Path:   "/api/create",
 		Field:  "url",
-		Code:   200,
+		Code:   http.StatusOK,
 	}}
 }

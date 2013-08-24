@@ -3,6 +3,7 @@ package isgd
 
 import (
 	"github.com/subosito/shorturl/base"
+	"net/http"
 )
 
 type Isgd struct {
@@ -16,6 +17,6 @@ func New() *Isgd {
 		Method: "GET",
 		Path:   "/api.php",
 		Field:  "longurl",
-		Code:   200,
+		Code:   http.StatusOK,
 	}}
 }

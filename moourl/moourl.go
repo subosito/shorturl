@@ -3,6 +3,7 @@ package moourl
 
 import (
 	"github.com/subosito/shorturl/base"
+	"net/http"
 	"strings"
 )
 
@@ -17,7 +18,7 @@ func New() *MooURL {
 		Method: "GET",
 		Path:   "/create/",
 		Field:  "source",
-		Code:   302,
+		Code:   http.StatusFound,
 	}}
 }
 

@@ -4,6 +4,7 @@ package gitio
 
 import (
 	"github.com/subosito/shorturl/base"
+	"net/http"
 	"net/url"
 )
 
@@ -18,7 +19,7 @@ func New() *GitIO {
 		Method: "POST",
 		Path:   "/create",
 		Field:  "url",
-		Code:   200,
+		Code:   http.StatusOK,
 	}}
 }
 

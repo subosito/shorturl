@@ -3,6 +3,7 @@ package shorl
 
 import (
 	"github.com/subosito/shorturl/base"
+	"net/http"
 	"regexp"
 )
 
@@ -19,7 +20,7 @@ func New() *Shorl {
 		Method: "GET",
 		Path:   "/create.php",
 		Field:  "url",
-		Code:   200,
+		Code:   http.StatusOK,
 	}}
 }
 

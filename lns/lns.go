@@ -3,6 +3,7 @@ package lns
 
 import (
 	"github.com/subosito/shorturl/base"
+	"net/http"
 )
 
 type Lns struct {
@@ -16,7 +17,7 @@ func New() *Lns {
 		Method: "GET",
 		Path:   "/home/api.jsp",
 		Field:  "url",
-		Code:   200,
+		Code:   http.StatusOK,
 	}}
 }
 

@@ -3,6 +3,7 @@ package cligs
 
 import (
 	"github.com/subosito/shorturl/base"
+	"net/http"
 	"regexp"
 	"strings"
 )
@@ -17,7 +18,7 @@ func New() *Cligs {
 		Host:   "cli.gs",
 		Method: "POST",
 		Field:  "url",
-		Code:   200,
+		Code:   http.StatusOK,
 		Params: map[string]string{
 			"do":         "shorten",
 			"sbmt":       "Shorten",

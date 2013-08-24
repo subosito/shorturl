@@ -3,6 +3,7 @@ package bitly
 
 import (
 	"github.com/subosito/shorturl/base"
+	"net/http"
 )
 
 type Bitly struct {
@@ -16,7 +17,7 @@ func New() *Bitly {
 		Method: "GET",
 		Path:   "/v3/shorten/",
 		Field:  "longUrl",
-		Code:   200,
+		Code:   http.StatusOK,
 		Params: map[string]string{
 			"format": "txt",
 			"login":  "",
