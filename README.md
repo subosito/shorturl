@@ -72,6 +72,7 @@ _Notes: Currently, adf.ly is not supported._
 | `adfly`     | http://adf.ly/         | -                              |
 | `googl`     | http://goo.gl/         | `GOOGL_API_KEY`                |
 | `gggg`      | http://gg.gg/          | -                              |
+| `parapt`    | http://para.pt/        | -                              |
 
 ## Resources
 
