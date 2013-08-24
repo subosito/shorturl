@@ -16,7 +16,7 @@ There are two ways using shorturl package:
 c := shorturl.NewClient("tinyurl") // you can use another provider, eg: "isgd"
 u, err := c.Shorten("http://example.com/")
 if err == nil {
-fmt.Println(u)
+	fmt.Println(u)
 }
 ```
 
@@ -28,7 +28,7 @@ fmt.Println(u)
 s := tinyurl.New()
 u, err := s.Shorten("http://example.com/")
 if err == nil {
-fmt.Println(u)
+	fmt.Println(u)
 }
 ```
 
@@ -49,6 +49,7 @@ fmt.Println(u)
 | `adfly`     | http://adf.ly/         | -                              |
 | `migreme`   | http://migre.me/       | -                              |
 | `googl`     | http://goo.gl/         | `GOOGL_API_KEY`                |
+| `gggg`      | http://gg.gg/          | -                              |
 
 ## Resources
 
