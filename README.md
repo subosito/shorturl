@@ -4,11 +4,19 @@
 
 Generic implementation for interacting with various URL shortening services in Go.
 
-## Shortening URL
+## Usage
 
-ShortURL provides simple API to shorten a long URL. There are two ways to perform this:
+As usual you can install the package by issuing:
 
-#### Unified client
+```bash
+$ go get github.com/subosito/shorturl
+```
+
+## Features
+
+**Shortening URL**
+
+ShortURL provides simple API to shorten a long URL, here's how:
 
 ```go
 // import "github.com/subosito/shorturl"
@@ -20,7 +28,7 @@ if err == nil {
 }
 ```
 
-#### Provider package
+Alternatively, you can initialize desired provider:
 
 ```go
 // import "github.com/subosito/shorturl/tinyurl"
@@ -32,9 +40,9 @@ if err == nil {
 }
 ```
 
-## Expanding short URL
+**Expanding short URL**
 
-Besides shortening long URL, this package also provides simple API to expand short URL into its original long URL.
+ShortURL also provides simple API to expand short URL into its original long URL:
 
 ```go
 // import "github.com/subosito/shorturl"
