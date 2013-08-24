@@ -73,6 +73,7 @@ _Notes: Currently, adf.ly is not supported._
 | `googl`     | http://goo.gl/         | `GOOGL_API_KEY`                |
 | `gggg`      | http://gg.gg/          | -                              |
 | `parapt`    | http://para.pt/        | -                              |
+| `pendekin`  | http://pendek.in/      | -                              |
 
 ## Resources
 

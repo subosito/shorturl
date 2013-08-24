@@ -12,6 +12,7 @@ import (
 	"github.com/subosito/shorturl/lns"
 	"github.com/subosito/shorturl/moourl"
 	"github.com/subosito/shorturl/parapt"
+	"github.com/subosito/shorturl/pendekin"
 	"github.com/subosito/shorturl/shorl"
 	"github.com/subosito/shorturl/snipurl"
 	"github.com/subosito/shorturl/tinyurl"
@@ -74,6 +75,9 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 		return s.Shorten(u)
 	case "parapt":
 		s := parapt.New()
+		return s.Shorten(u)
+	case "pendekin":
+		s := pendekin.New()
 		return s.Shorten(u)
 	}
 
