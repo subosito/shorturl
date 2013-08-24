@@ -13,7 +13,7 @@ There are two ways using shorturl package:
 ```go
 // import "github.com/subosito/shorturl"
 
-u := "http://subosito.com/"
+url := "http://subosito.com/"
 
 c := shorturl.NewClient("tinyurl") // you can use another provider, eg: "isgd"
 u, err := c.Shorten(Url)
@@ -27,7 +27,7 @@ fmt.Println(u)
 ```go
 // import "github.com/subosito/shorturl/tinyurl"
 
-u := "http://subosito.com/"
+Url := "http://subosito.com/"
 s := tinyurl.New()
 u, err := s.Shorten(Url)
 if err == nil {
