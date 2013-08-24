@@ -78,6 +78,10 @@ func (s *Service) Request(u string) (*http.Response, error) {
 		return nil, err
 	}
 
+	if s.Method == "POST" {
+		req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+	}
+
 	client := &http.Client{Transport: s.transport()}
 	return client.Do(req)
 }
