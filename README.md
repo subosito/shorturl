@@ -70,7 +70,6 @@ _Notes: Currently, adf.ly is not supported._
 | `cligs`     | http://cli.gs/         | -                              |
 | `snipurl`   | http://snipurl.com/    | -                              |
 | `adfly`     | http://adf.ly/         | -                              |
-| `migreme`   | http://migre.me/       | -                              |
 | `googl`     | http://goo.gl/         | `GOOGL_API_KEY`                |
 | `gggg`      | http://gg.gg/          | -                              |
 
