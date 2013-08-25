@@ -57,7 +57,7 @@ _Notes: Currently, adf.ly is not supported._
 
 ## Supported Services
 
-| package     | service                  | Enviroment Variables           |
+| Package     | Service                  | Enviroment Variables           |
 |-------------|--------------------------|--------------------------------|
 | `tinyurl`   | http://tinyurl.com/      | -                              |
 | `isgd`      | http://is.gd/            | -                              |
