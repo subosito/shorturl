@@ -75,6 +75,7 @@ _Notes: Currently, adf.ly is not supported._
 | `parapt`    | http://para.pt/          | -                              |
 | `pendekin`  | http://pendek.in/        | -                              |
 | `catchy`    | http://catchylink.com/   | -                              |
+| `rddme`     | http://rdd.me/           | -                              |
 
 ## Resources
 
