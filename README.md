@@ -68,7 +68,6 @@ _Notes: Currently, adf.ly is not supported._
 | `gitio`     | http://git.io/           | -                              |
 | `googl`     | http://goo.gl/           | `GOOGL_API_KEY`                |
 | `isgd`      | http://is.gd/            | -                              |
-| `lns`       | http://ln-s.net/         | -                              |
 | `moourl`    | http://moourl.com/       | -                              |
 | `pendekin`  | http://pendek.in/        | -                              |
 | `rddme`     | http://rdd.me/           | -                              |
