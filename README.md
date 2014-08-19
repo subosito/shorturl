@@ -1,6 +1,7 @@
 # ShortURL
 
 [![Build Status](https://travis-ci.org/subosito/shorturl.png)](https://travis-ci.org/subosito/shorturl)
+[![GoDoc](https://godoc.org/github.com/subosito/shorturl?status.png)](https://godoc.org/github.com/subosito/shorturl)
 
 Generic implementation for interacting with various URL shortening services in Go.
 
@@ -59,29 +60,24 @@ _Notes: Currently, adf.ly is not supported._
 
 | Package     | Service                  | Enviroment Variables           |
 |-------------|--------------------------|--------------------------------|
-| `tinyurl`   | http://tinyurl.com/      | -                              |
-| `isgd`      | http://is.gd/            | -                              |
-| `gitio`     | http://git.io/           | -                              |
-| `bitly`     | https://bitly.com/       | `BITLY_API_KEY`, `BITLY_LOGIN` |
-| `lns`       | http://ln-s.net/         | -                              |
-| `shorl`     | http://shorl.com/        | -                              |
-| `vamu`      | http://va.mu/            | -                              |
-| `moourl`    | http://moourl.com/       | -                              |
-| `cligs`     | http://cli.gs/           | -                              |
-| `snipurl`   | http://snipurl.com/      | -                              |
 | `adfly`     | http://adf.ly/           | -                              |
-| `googl`     | http://goo.gl/           | `GOOGL_API_KEY`                |
-| `gggg`      | http://gg.gg/            | -                              |
-| `parapt`    | http://para.pt/          | -                              |
-| `pendekin`  | http://pendek.in/        | -                              |
+| `bitly`     | https://bitly.com/       | `BITLY_API_KEY`, `BITLY_LOGIN` |
 | `catchy`    | http://catchylink.com/   | -                              |
+| `cligs`     | http://cli.gs/           | -                              |
+| `gggg`      | http://gg.gg/            | -                              |
+| `gitio`     | http://git.io/           | -                              |
+| `googl`     | http://goo.gl/           | `GOOGL_API_KEY`                |
+| `isgd`      | http://is.gd/            | -                              |
+| `lns`       | http://ln-s.net/         | -                              |
+| `moourl`    | http://moourl.com/       | -                              |
+| `pendekin`  | http://pendek.in/        | -                              |
 | `rddme`     | http://rdd.me/           | -                              |
-
-## Resources
-
-- [Documentation](http://godoc.org/github.com/subosito/shorturl)
+| `shorl`     | http://shorl.com/        | -                              |
+| `snipurl`   | http://snipurl.com/      | -                              |
+| `tinyurl`   | http://tinyurl.com/      | -                              |
+| `vamu`      | http://va.mu/            | -                              |
 
 ## Credits
 
-Inspiration comes from [shorturl Rubygem](https://github.com/robbyrussell/shorturl) by [@robbyrussell](https://github.com/robbyrussell)
+Inspiration comes from Rubygem [shorturl](https://github.com/robbyrussell/shorturl) by [@robbyrussell](https://github.com/robbyrussell)
 
