@@ -1,7 +1,7 @@
 # ShortURL
 
-[![Build Status](https://travis-ci.org/subosito/shorturl.png)](https://travis-ci.org/subosito/shorturl)
-[![GoDoc](https://godoc.org/github.com/subosito/shorturl?status.png)](https://godoc.org/github.com/subosito/shorturl)
+[![Build Status](https://travis-ci.org/subosito/shorturl.svg?branch=master)](https://travis-ci.org/subosito/shorturl)
+[![GoDoc](https://godoc.org/github.com/subosito/shorturl?status.svg)](https://godoc.org/github.com/subosito/shorturl)
 
 Generic implementation for interacting with various URL shortening services in Go.
 
