@@ -2,9 +2,10 @@
 package pendekin
 
 import (
-	"github.com/subosito/shorturl/base"
 	"net/http"
 	"regexp"
+
+	"github.com/subosito/shorturl/base"
 )
 
 var Pattern string = `http://pendek.in/[a-z0-9A-Z]+`
@@ -24,19 +25,19 @@ func New() *Pendekin {
 	}}
 }
 
-func (s *Pendekin) Shorten(u string) ([]byte, error) {
+func (s *Pendekin) Shorten(u string) (string, error) {
 	res, err := s.Request(u)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	b, err := s.Read(res)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	r := regexp.MustCompile(Pattern)
 	o := r.FindString(string(b))
 
-	return []byte(o), nil
+	return o, nil
 }

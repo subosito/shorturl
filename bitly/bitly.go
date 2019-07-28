@@ -27,15 +27,15 @@ func New(token string) *Bitly {
 	}}
 }
 
-func (s *Bitly) Shorten(u string) ([]byte, error) {
+func (s *Bitly) Shorten(u string) (string, error) {
 	res, err := s.Request(u)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	b, err := s.Read(res)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	v := struct {
@@ -43,8 +43,8 @@ func (s *Bitly) Shorten(u string) ([]byte, error) {
 	}{}
 
 	if err := json.Unmarshal(b, &v); err != nil {
-		return nil, err
+		return "", err
 	}
 
-	return []byte(v.Link), nil
+	return v.Link, nil
 }

@@ -4,17 +4,17 @@ import (
 	"net/http"
 )
 
-func Shorten(u, provider string) ([]byte, error) {
+func Shorten(u, provider string) (string, error) {
 	c := NewClient(provider)
 	return c.Shorten(u)
 }
 
-func Expand(u string) ([]byte, error) {
+func Expand(u string) (string, error) {
 	res, err := http.Get(u)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	f := res.Request.URL.String()
-	return []byte(f), nil
+	return f, nil
 }

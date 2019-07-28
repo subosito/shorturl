@@ -24,15 +24,15 @@ func New() *GitIO {
 	}}
 }
 
-func (s *GitIO) Shorten(u string) ([]byte, error) {
+func (s *GitIO) Shorten(u string) (string, error) {
 	res, err := s.Request(u)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	b, err := s.Read(res)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	ux := url.URL{
@@ -41,5 +41,5 @@ func (s *GitIO) Shorten(u string) ([]byte, error) {
 		Path:   string(append([]byte("/"), b...)),
 	}
 
-	return []byte(ux.String()), nil
+	return ux.String(), nil
 }

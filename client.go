@@ -22,7 +22,7 @@ func NewClient(provider string) *Client {
 	return &Client{Provider: provider}
 }
 
-func (c *Client) Shorten(u string) ([]byte, error) {
+func (c *Client) Shorten(u string) (string, error) {
 	switch c.Provider {
 	case "tinyurl":
 		s := tinyurl.New()
@@ -49,5 +49,5 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 	}
 
 	err := errors.New("You should not see this :P")
-	return nil, err
+	return "", err
 }

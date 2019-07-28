@@ -12,7 +12,7 @@ import (
 )
 
 type Servicer interface {
-	Shorten(u string) ([]byte, error)
+	Shorten(u string) (string, error)
 }
 
 type Service struct {
@@ -44,18 +44,18 @@ func (s *Service) Url() url.URL {
 	}
 }
 
-func (s *Service) Shorten(u string) ([]byte, error) {
+func (s *Service) Shorten(u string) (string, error) {
 	res, err := s.Request(u)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	b, err := s.Read(res)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
-	return b, nil
+	return string(b), nil
 }
 
 func (s *Service) Request(u string) (*http.Response, error) {

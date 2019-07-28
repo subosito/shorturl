@@ -2,9 +2,10 @@
 package shorl
 
 import (
-	"github.com/subosito/shorturl/base"
 	"net/http"
 	"regexp"
+
+	"github.com/subosito/shorturl/base"
 )
 
 var Pattern string = "http://shorl.com/[a-zA-Z0-9]+"
@@ -24,18 +25,18 @@ func New() *Shorl {
 	}}
 }
 
-func (s *Shorl) Shorten(u string) ([]byte, error) {
+func (s *Shorl) Shorten(u string) (string, error) {
 	res, err := s.Request(u)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	b, err := s.Read(res)
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 
 	r := regexp.MustCompile(Pattern)
 	m := r.FindString(string(b))
-	return []byte(m), nil
+	return m, nil
 }
