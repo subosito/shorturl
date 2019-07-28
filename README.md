@@ -60,7 +60,6 @@ _Notes: Currently, adf.ly is not supported._
 
 | Package     | Service                  | Enviroment Variables           |
 |-------------|--------------------------|--------------------------------|
-| `adfly`     | http://adf.ly/           | -                              |
 | `bitly`     | https://bitly.com/       | `BITLY_API_KEY`, `BITLY_LOGIN` |
 | `gggg`      | http://gg.gg/            | -                              |
 | `gitio`     | http://git.io/           | -                              |

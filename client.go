@@ -2,21 +2,15 @@ package shorturl
 
 import (
 	"errors"
-	"github.com/subosito/shorturl/adfly"
+	"os"
+
 	"github.com/subosito/shorturl/bitly"
-	"github.com/subosito/shorturl/catchy"
-	"github.com/subosito/shorturl/cligs"
 	"github.com/subosito/shorturl/gggg"
 	"github.com/subosito/shorturl/gitio"
-	"github.com/subosito/shorturl/googl"
 	"github.com/subosito/shorturl/isgd"
-	"github.com/subosito/shorturl/moourl"
 	"github.com/subosito/shorturl/pendekin"
 	"github.com/subosito/shorturl/shorl"
-	"github.com/subosito/shorturl/snipurl"
 	"github.com/subosito/shorturl/tinyurl"
-	"github.com/subosito/shorturl/vamu"
-	"os"
 )
 
 type Client struct {
@@ -47,33 +41,11 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 	case "shorl":
 		s := shorl.New()
 		return s.Shorten(u)
-	case "vamu":
-		s := vamu.New()
-		return s.Shorten(u)
-	case "moourl":
-		s := moourl.New()
-		return s.Shorten(u)
-	case "cligs":
-		s := cligs.New()
-		return s.Shorten(u)
-	case "snipurl":
-		s := snipurl.New()
-		return s.Shorten(u)
-	case "adfly":
-		s := adfly.New()
-		return s.Shorten(u)
-	case "googl":
-		s := googl.New()
-		s.Params["key"] = os.Getenv("GOOGL_API_KEY")
-		return s.Shorten(u)
 	case "gggg":
 		s := gggg.New()
 		return s.Shorten(u)
 	case "pendekin":
 		s := pendekin.New()
-		return s.Shorten(u)
-	case "catchy":
-		s := catchy.New()
 		return s.Shorten(u)
 	}
 
