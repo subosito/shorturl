@@ -62,19 +62,12 @@ _Notes: Currently, adf.ly is not supported._
 |-------------|--------------------------|--------------------------------|
 | `adfly`     | http://adf.ly/           | -                              |
 | `bitly`     | https://bitly.com/       | `BITLY_API_KEY`, `BITLY_LOGIN` |
-| `catchy`    | http://catchylink.com/   | -                              |
-| `cligs`     | http://cli.gs/           | -                              |
 | `gggg`      | http://gg.gg/            | -                              |
 | `gitio`     | http://git.io/           | -                              |
-| `googl`     | http://goo.gl/           | `GOOGL_API_KEY`                |
 | `isgd`      | http://is.gd/            | -                              |
-| `moourl`    | http://moourl.com/       | -                              |
 | `pendekin`  | http://pendek.in/        | -                              |
-| `rddme`     | http://rdd.me/           | -                              |
 | `shorl`     | http://shorl.com/        | -                              |
-| `snipurl`   | http://snipurl.com/      | -                              |
 | `tinyurl`   | http://tinyurl.com/      | -                              |
-| `vamu`      | http://va.mu/            | -                              |
 
 ## Credits
 
