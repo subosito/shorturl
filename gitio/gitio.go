@@ -3,9 +3,10 @@
 package gitio
 
 import (
-	"github.com/subosito/shorturl/base"
 	"net/http"
 	"net/url"
+
+	"github.com/subosito/shorturl/base"
 )
 
 type GitIO struct {
@@ -14,7 +15,7 @@ type GitIO struct {
 
 func New() *GitIO {
 	return &GitIO{&base.Service{
-		Scheme: "http",
+		Scheme: "https",
 		Host:   "git.io",
 		Method: "POST",
 		Path:   "/create",

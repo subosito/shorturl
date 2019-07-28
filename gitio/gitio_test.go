@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-var Url string = "http://github.com/subosito/shorturl"
+var Url string = "https://github.com/subosito/shorturl"
 
 func TestGitIO(t *testing.T) {
 	s := New()
