@@ -60,11 +60,10 @@ if err == nil {
 |-------------|--------------------------|----------------------------|
 | `bitly`     | https://bitly.com/       | `BITLY_ACCESS_TOKEN`       |
 | `gggg`      | http://gg.gg/            | -                          |
-| `gitio`     | http://git.io/           | -                          |
-| `isgd`      | http://is.gd/            | -                          |
-| `pendekin`  | http://pendek.in/        | -                          |
+| `gitio`     | https://git.io/          | -                          |
+| `isgd`      | https://is.gd/           | -                          |
 | `shorl`     | http://shorl.com/        | -                          |
-| `tinyurl`   | http://tinyurl.com/      | -                          |
+| `tinyurl`   | https://tinyurl.com/     | -                          |
 
 ## Credits
 
