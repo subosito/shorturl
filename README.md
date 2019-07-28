@@ -54,19 +54,17 @@ if err == nil {
 }
 ```
 
-_Notes: Currently, adf.ly is not supported._
-
 ## Supported Services
 
-| Package     | Service                  | Enviroment Variables           |
-|-------------|--------------------------|--------------------------------|
-| `bitly`     | https://bitly.com/       | `BITLY_API_KEY`, `BITLY_LOGIN` |
-| `gggg`      | http://gg.gg/            | -                              |
-| `gitio`     | http://git.io/           | -                              |
-| `isgd`      | http://is.gd/            | -                              |
-| `pendekin`  | http://pendek.in/        | -                              |
-| `shorl`     | http://shorl.com/        | -                              |
-| `tinyurl`   | http://tinyurl.com/      | -                              |
+| Package     | Service                  | Enviroment Variables       |
+|-------------|--------------------------|----------------------------|
+| `bitly`     | https://bitly.com/       | `BITLY_ACCESS_TOKEN`       |
+| `gggg`      | http://gg.gg/            | -                          |
+| `gitio`     | http://git.io/           | -                          |
+| `isgd`      | http://is.gd/            | -                          |
+| `pendekin`  | http://pendek.in/        | -                          |
+| `shorl`     | http://shorl.com/        | -                          |
+| `tinyurl`   | http://tinyurl.com/      | -                          |
 
 ## Credits
 
