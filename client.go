@@ -34,9 +34,8 @@ func (c *Client) Shorten(u string) ([]byte, error) {
 		s := gitio.New()
 		return s.Shorten(u)
 	case "bitly":
-		s := bitly.New()
-		s.Params["login"] = os.Getenv("BITLY_LOGIN")
-		s.Params["apiKey"] = os.Getenv("BITLY_API_KEY")
+		token := os.Getenv("BITLY_ACCESS_TOKEN")
+		s := bitly.New(token)
 		return s.Shorten(u)
 	case "shorl":
 		s := shorl.New()

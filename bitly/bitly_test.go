@@ -8,9 +8,9 @@ import (
 var Url string = "http://github.com/subosito/shorturl"
 
 func TestBitly(t *testing.T) {
-	s := New()
-	s.Params["login"] = os.Getenv("BITLY_LOGIN")
-	s.Params["apiKey"] = os.Getenv("BITLY_API_KEY")
+	token := os.Getenv("BITLY_ACCESS_TOKEN")
+
+	s := New(token)
 	u, err := s.Shorten(Url)
 	if err != nil {
 		t.Error(err)

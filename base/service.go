@@ -23,6 +23,7 @@ type Service struct {
 	Path      string
 	Field     string
 	Params    map[string]string
+	Headers   map[string]string
 	Format    string
 	Transport http.RoundTripper
 }
@@ -76,10 +77,17 @@ func (s *Service) Request(u string) (*http.Response, error) {
 	}
 
 	if s.Format == "JSON" {
-		b, err := json.Marshal(v)
+		z := map[string]string{}
+
+		for k := range v {
+			z[k] = v.Get(k)
+		}
+
+		b, err := json.Marshal(z)
 		if err != nil {
 			return nil, err
 		}
+
 		d = string(b)
 	}
 
@@ -96,6 +104,10 @@ func (s *Service) Request(u string) (*http.Response, error) {
 		req.Header.Set("Content-Type", "application/json")
 	}
 
+	for key, val := range s.Headers {
+		req.Header.Set(key, val)
+	}
+
 	client := &http.Client{Transport: s.transport()}
 	return client.Do(req)
 }
@@ -110,5 +122,6 @@ func (s *Service) Read(r *http.Response) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	return b, nil
 }
