@@ -8,7 +8,6 @@ import (
 	"github.com/subosito/shorturl/gggg"
 	"github.com/subosito/shorturl/gitio"
 	"github.com/subosito/shorturl/isgd"
-	"github.com/subosito/shorturl/pendekin"
 	"github.com/subosito/shorturl/shorl"
 	"github.com/subosito/shorturl/tinyurl"
 )
@@ -42,9 +41,6 @@ func (c *Client) Shorten(u string) (string, error) {
 		return s.Shorten(u)
 	case "gggg":
 		s := gggg.New()
-		return s.Shorten(u)
-	case "pendekin":
-		s := pendekin.New()
 		return s.Shorten(u)
 	}
 
